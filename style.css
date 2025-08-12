@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 115%;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: relative;
+    background-image: url(https://www.monologuelondon.com/cdn/shop/products/Monologue-London-AndTradition-2021-In-Between-Rely-Chair-Flowerpot.jpg?v=1621349078&width=2362);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80%;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 98%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.61);
+    z-index: 0;
+    border-radius: 5rem;
+    margin: 1%;
+}
+
+.navbar>* {
+    position: relative;
+    z-index: 2;
+}
+
+.top {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    gap: 71%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
+.icons {
+    margin-top: 2%;
+    display: flex;
+    gap: 10%;
+    margin-right: 6%;
+    position: relative;
+}
+
+.icons sup {
+    border: transparent;
+    border-radius: 12rem;
+    height: 20px;
+    width: 71px !important;
+    color: white;
+    background-color: black;
+    margin-left: -16%;
+    margin-top: -4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3 ease;
+    font-size: 0.6rem;
+}
+
+.icons sup:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: transparent;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 37%;
+    height: 91%;
+}
+
+.logo span {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 36px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: -3px;
+}
+
+.logo span:hover {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+.logo span:hover {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+.nav {
+    display: flex;
+    text-align: center;
+    justify-content: left;
+    margin-left: 5.6%;
+    gap: 3%;
+    align-items: center;
+    margin-top: -2%;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15%;
+}
+
+.nav ul li {
+    display: flex;
+    gap: 10%;
+}
+
+.nav i {
+    margin-top: -1%;
+}
+
+.nav .toggle_btn {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.svg {
+    color: white !important;
+    width: 22px !important;
+    margin-left: -4% !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+li svg:first-of-type {
+    width: 26px !important;
+    margin-top: -6%;
+    color: white;
+    cursor: pointer;
+    transition: transform .2s ease;
+}
+
+li svg:hover {
+    color: rgba(255, 255, 255, 0.651) !important;
+}
+
+li svg:first-of-type:hover {
+    color: rgba(255, 255, 255, 0.651);
+    transition: transform .2s ease;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: -3%;
+}
+
+.nav ul li a:hover {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+.fa-solid {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#search-box {
+    display: none;
+    position: absolute;
+    top: 49px;
+    left: 36%;
+    transform: translateX(-50%);
+    width: 256px;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 30px;
+    border: 1px solid #cccccc00;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    background: #ffffff14;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.user-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    position: relative;
+    /* zarurat pade to adjust karna */
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 10000;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+}
+
+.fa-solid:hover {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+.fa-regular {
+    color: white;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.fa-regular:hover {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+.line {
+    background-color: rgba(255, 255, 255, 0.151);
+    height: 1%;
+    width: 95%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 100;
+    margin-top: 4%;
+    border-radius: 100px;
+}
+
+.home {
+    position: absolute;
+    z-index: 100;
+    color: white;
+    margin-top: 20%;
+    margin-left: 5.5%;
+}
+
+.home p {
+    margin-bottom: 5%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.home p:hover {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+.home h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    margin-bottom: 5%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.home h1:hover {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+.home button {
+    background-color: #ffffff;
+    border-radius: 300px;
+    padding: 1rem 3rem;
+    border: transparent;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.home button:hover {
+    background-color: #deb44e;
+    color: white;
+    scale: 1.05;
+}
+
+.home button:active {
+    scale: 0.95;
+}
+
+/* Dropdown list hidden by default */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 12px;
+    min-width: 220px;
+    z-index: 50;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Column layout for items */
+.dropdown li {
+    display: block;
+    padding: 6px 4px;
+    white-space: normal;
+    color: #222;
+}
+
+/* When open */
+li.open>svg {
+    transform: rotate(180deg);
+    transition: all 0.5s ease;
+}
+
+/* optional rotate */
+li.open .dropdown {
+    display: block;
+}
+
+li.has-dropdown:not(.open) .dropdown {
+    display: none !important;
+}
+
+/* Small responsive fix */
+@media (max-width:600px) {
+    nav.nav ul {
+        gap: 8px;
+    }
+
+    .dropdown {
+        min-width: 180px;
+    }
+}
+
+/* DROPDOWN MENU */
+
+
+/* RESPONSIVE DESIGN */
+@media only screen and (max-width: 992x) {
+    .nav ul {
+        display: none;
+    }
+
+    .home button {
+        display: none;
+    }
+
+    .nav .toggle_btn {
+        display: block;
+    }
+}
